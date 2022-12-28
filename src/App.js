@@ -14,6 +14,7 @@ export default function App() {
     <Todo
       key={todo.id}
       item={todo}
+      edit={() => handleEdit(todo.id)}
       delete={() => handleDelete(todo.id)}
       done={() => handleDone(todo.id)}
     />
@@ -44,6 +45,12 @@ export default function App() {
       });
     });
   };
+
+  //handleEdit to edit task
+  const handleEdit = (id) => {
+    handleClick();
+    console.log(id);
+  };
   //handleChange for the prompt's input
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,6 +63,7 @@ export default function App() {
 
   //handleOk for the prompt's Ok button
   const handleOK = (e) => {
+    e.preventDefault();
     if (!!task?.taskInput) {
       setTodoArr((prevList) => {
         return [...prevList, task];

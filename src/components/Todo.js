@@ -18,7 +18,7 @@ export default function Todo(props) {
         {props.item.taskInput}
       </p>
       <span className="todo--icons">
-        <img src={pencilIcon} alt="" onClick={props.click} />
+        <img src={pencilIcon} alt="" onClick={props.edit} />
         <img src={checkedIcon} alt="" onClick={props.done} />
         <img src={deleteIcon} alt="" onClick={props.delete} />
       </span>

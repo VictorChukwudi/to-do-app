@@ -24,21 +24,26 @@
   background: #ffffff;
   height: 65px;
   padding-left: 30px;
-  padding-right: 25px;
+  padding-right: 35px;
   margin-bottom: 5px;
 }
 .todo--item {
   margin: 8px 0;
+  text-transform: capitalize;
   /* padding: 0px 0px 3px 20px; */
 }
 .todo--icons {
   display: flex;
-  justify-content: space-between;
+  gap: 5px;
   width: 85px;
 }
-.todo > hr {
-  margin: 3px 50px;
-  color: #c3bbbb;
+.todo--icons > img {
+  padding: 5px;
+}
+.todo--icons img:hover {
+  width: 40px;
+  border-radius: 30%;
+  box-shadow: 3px 5px 5px gray;
 }
 .todo--time {
   margin-left: 3px;
@@ -104,7 +109,15 @@
 .prompt--details > button {
   position: relative;
   top: 5px;
-  left: 25%;
+  left: 12%;
+  border: 1px solid lightblue;
+  border-radius: 10px;
+  background-color: lightblue;
+  color: #ffffff;
+  width: 80px;
+  margin-right: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .prompt--details > label {
   margin-left: 5px;
