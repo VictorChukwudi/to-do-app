@@ -1,5 +1,4 @@
 import React from "react";
-
 const Prompt = (props) => {
   return (
     <div className="prompt">
@@ -13,6 +12,7 @@ const Prompt = (props) => {
           name="taskInput"
           className="taskInput"
           onChange={props.onChange}
+          value={props.value}
         />
         <br />
         <button onClick={props.onCancel}>cancel</button>
