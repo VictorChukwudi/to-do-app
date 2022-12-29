@@ -79,7 +79,6 @@ export default function App() {
         return [...prevList, task];
       });
     }
-    console.log(todoArr);
     setTask({});
     setIsTask(false);
   };
