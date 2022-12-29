@@ -48,14 +48,24 @@ export default function App() {
 
   //handleEdit to edit task
   const handleEdit = (id) => {
-    handleClick();
-    console.log(id);
+    const singleTask = todoArr.find((todo) => todo.id === id);
+    const update = prompt("Edit Task", `${singleTask.taskInput}`);
+    if (update) {
+      setTodoArr((prevList) => {
+        return prevList.map((todo) => {
+          return todo.id === id ? { ...todo, taskInput: update } : todo;
+        });
+      });
+    }
   };
   //handleChange for the prompt's input
   const handleChange = (e) => {
     const { name, value } = e.target;
     setTask({
-      id: todoArr.length + 1,
+      id:
+        todoArr.length === 0
+          ? todoArr.length + 1
+          : todoArr[todoArr.length - 1].id + 1,
       [name]: value,
       completed: false,
     });
@@ -69,6 +79,7 @@ export default function App() {
         return [...prevList, task];
       });
     }
+    console.log(todoArr);
     setTask({});
     setIsTask(false);
   };
