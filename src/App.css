@@ -122,3 +122,32 @@
 .prompt--details > label {
   margin-left: 5px;
 }
+
+@media screen and (min-width: 360px) and (max-width: 450px) {
+  .app {
+    width: 300px;
+  }
+  .prompt {
+    width: 250px;
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .app {
+    width: 200px;
+  }
+  .prompt {
+    width: 150px;
+    height: 95px;
+    left: 12%;
+  }
+  .taskInput {
+    width: 120px;
+  }
+  .prompt--details > button {
+    left: 3%;
+    width: 60px;
+    margin-right: 3px;
+  }
+}
